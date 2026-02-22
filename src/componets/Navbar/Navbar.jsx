@@ -325,11 +325,10 @@
 //         </div>
 //       </div>
 //     </div>
-//   );
+// );
 // }
 
 // export default Navbar;
-
 
 
 
@@ -472,14 +471,9 @@ function Navbar({ onSearch }) {
         genre => genre.id === 16 // 16 is Animation genre ID
       );
 
-      if (isAnime) {
-        // Redirect to anime site
-        const animeTitle = encodeURIComponent(result.title || result.name);
-        window.open(`https://aniwatch.to/search?keyword=${animeTitle}`, '_blank');
-      } else {
-        // Normal movie/TV show
+
         navigate(`/player/${result.media_type}/${result.id}`);
-      }
+      
       
       setShowSearchInput(false);
       setQuery('');

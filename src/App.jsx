@@ -57,11 +57,15 @@ function App() {
       </Helmet>
       <div className='App'>
         <Routes>
-          <Route path='/' element={<LandingPage />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/home' element={<Home onSearch={handleSearch} />} />
-          <Route path='/player/:type/:id' element={<Player />} />
-        </Routes>
+  <Route path='/' element={<LandingPage />} />
+  <Route path='/login' element={<Login />} />
+  <Route path='/home' element={<Home onSearch={handleSearch} />} />
+  <Route path='/player/:type/:id' element={<Player />} />
+  
+
+  <Route path="*" element={<LandingPage />} />
+</Routes>
+
       </div>
     </HelmetProvider>
   );
